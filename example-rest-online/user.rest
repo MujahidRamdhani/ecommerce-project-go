@@ -1,0 +1,52 @@
+// register 
+### 
+curl --location 'https://api.mujahid-dev.my.id/users/register' \
+--data-raw '{
+    "full_name": "admin",
+    "email": "admin@admin.com",
+    "password": "admin"
+}'
+
+
+// register user
+### 
+curl --location 'https://api.mujahid-dev.my.id/users/register' \
+--data-raw '{
+    "full_name": "user3",
+    "email": "user3@user.com",
+    "password": "secret"
+}'
+
+//login by user
+###
+curl --location 'https://api.mujahid-dev.my.id/users/login' \
+--data-raw '{
+    "email": "user3@user.com",
+    "password": "secret"
+}'
+
+//login by admin
+###
+curl --location 'https://api.mujahid-dev.my.id/users/login' \
+--data-raw '{
+    "email": "admin@admin.com",
+    "password": "admin"
+}'
+
+
+// edit
+###
+curl --location --request PUT 'https://api.mujahid-dev.my.id/users/edit' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+--data-raw '{
+    "full_name": "admin",
+    "email": "admin@admin.com",
+    "password": "admin",
+    "is_admin": true
+}'
+
+//get all
+###
+curl --location --request GET 'https://api.mujahid-dev.my.id/users/get-all-users?page=1&limit=5' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+

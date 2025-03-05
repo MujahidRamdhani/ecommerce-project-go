@@ -1,0 +1,29 @@
+// insert 
+###
+curl --location --request POST 'https://api.mujahid-dev.my.id/category/add' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+--data-raw '{
+  "name": "fashion"
+}'
+
+// edit 
+###
+curl --location --request PUT 'https://api.mujahid-dev.my.id/category/edit/2' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+--data-raw '{
+  "name": "furniture update"
+}'
+
+// delete
+###
+curl --location --request DELETE 'https://api.mujahid-dev.my.id/category/delete/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+
+
+// getall
+###
+curl --location --request GET 'https://api.mujahid-dev.my.id/category/get-all' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+
+
+

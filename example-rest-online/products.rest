@@ -1,0 +1,43 @@
+// insert 
+###
+curl --location --request POST 'https://api.mujahid-dev.my.id/product/add' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+--data-raw '{
+  "cat_id"         :    3,
+  "name"           :    "Kemeja Flanel",
+  "description"    :    "Kemeja flanel berbahan lembut dengan motif kotak-kotak trendy.",
+  "is_available"   :    true,
+  "stock_unit"     :       5,
+  "price_per_unit" :   6000
+}'
+
+
+// edit 
+###
+curl --location --request PUT 'https://api.mujahid-dev.my.id/product/edit/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+--data-raw '{
+  "cat_id"         :    2,
+  "name"           :    "Smartwatch",
+  "description"    :    "Jam tangan pintar dengan fitur kesehatan dan tahan air update.",
+  "is_available"   :    true,
+  "stock_unit"     :       5,
+  "price_per_unit" :   4000
+}'
+
+// delete
+###
+curl --location --request DELETE 'https://api.mujahid-dev.my.id/product/delete/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDA5OTgsImlhdCI6MTc0MTE1NDU5OCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.mPmBg8cZHvB__4pSpy0XIpcQBqd1ksWpa9fMD7h-2v8' \
+
+// getall
+###
+curl --location --request GET 'https://api.mujahid-dev.my.id/product/get-all' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+// getall using custom page
+###
+curl --location --request GET 'https://api.mujahid-dev.my.id/product/get-all?page=1&limit=5' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+

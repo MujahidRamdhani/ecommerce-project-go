@@ -32,7 +32,7 @@ curl --location --request DELETE 'http://localhost:8080/product/delete/1' \
 
 // getall
 ###
-curl --location --request GET 'http://localhost:8080/product/get-all' \
+curl --location --request GET 'http://localhost:8080/product/get-all?page=1&limit=5' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
 
 

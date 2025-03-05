@@ -46,7 +46,7 @@ curl --location 'http://localhost:8080/users/register' \
 // edit
 ###
 curl --location --request PUT 'http://localhost:8080/users/edit' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODA0MTQsImlhdCI6MTc0MTA5NDAxNCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.HqtDTu8eXYoVBKlPltgDcEdj-ut1b3xbTSGusFy5IPU' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDM4MzEsImlhdCI6MTc0MTE1NzQzMSwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.fbT1LDSqbh309rJRm0AvX23Oqh_C62JZp7mKeXtfEjw' \
 --data-raw '{
     "full_name": "admin",
     "email": "admin@admin.com",
@@ -58,5 +58,5 @@ curl --location --request PUT 'http://localhost:8080/users/edit' \
 //get all
 ###
 curl --location --request GET 'http://localhost:8080/users/get-all-users?page=1&limit=5' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODA0MTQsImlhdCI6MTc0MTA5NDAxNCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.HqtDTu8eXYoVBKlPltgDcEdj-ut1b3xbTSGusFy5IPU' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyNDM4MzEsImlhdCI6MTc0MTE1NzQzMSwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjF9.fbT1LDSqbh309rJRm0AvX23Oqh_C62JZp7mKeXtfEjw' \
 
