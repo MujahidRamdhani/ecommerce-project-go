@@ -1,0 +1,62 @@
+// create
+###
+curl --location --request POST 'http://localhost:8080/users/transaction/create' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "item"         :    "Kursi",
+  "unit"         :    2
+}'
+
+// edit 
+###
+curl --location --request PUT 'http://localhost:8080/users/transaction/edit/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+--data-raw '{
+  "name": "furniture update"
+}'
+
+// getall
+###
+curl --location --request GET 'http://localhost:8080/users/transaction/get-all?page=1&limit=8' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+
+// update status pay
+###
+curl --location --request PUT 'http://localhost:8080/users/transaction/9?action=pay' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+--header 'Content-Type: application/json' \
+
+
+// update status cancel
+###
+curl --location --request PUT 'http://localhost:8080/users/transaction/8?action=cancel' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+--header 'Content-Type: application/json' \
+
+// get by status failed
+###
+curl --location GET 'http://localhost:8080/users/transaction/get?status=Failed' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+
+// get by status paid
+###
+curl --location GET 'http://localhost:8080/users/transaction/get?status=Paid' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+
+// update status received admin
+###
+curl --location --request PUT 'http://localhost:8080/users/transaction/admin/9' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMzE1MjgsImlhdCI6MTc0MTE0NTEyOCwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.DaeZ5pm04k-Ztzj4ko_-W2NYOfyC-MXtUWx3n0Tu7eY' \
+--header 'Content-Type: application/json' \
+
+
+
+
+
+
+
+

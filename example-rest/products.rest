@@ -1,0 +1,39 @@
+// insert 
+###
+curl --location --request POST 'http://localhost:8080/product/add' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+--data-raw '{
+  "cat_id"         :    2,
+  "name"           :    "Kursi",
+  "description"    :    "beautiful kursi",
+  "is_available"   :    true,
+  "stock_unit"     :       5,
+  "price_per_unit" :   4000
+}'
+
+
+// edit 
+###
+curl --location --request PUT 'http://localhost:8080/product/edit/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+--data-raw '{
+  "cat_id"         :    2,
+  "name"           :    "Kursi",
+  "description"    :    "beautiful kursi update",
+  "is_available"   :    true,
+  "stock_unit"     :       5,
+  "price_per_unit" :   4000
+}'
+
+// delete
+###
+curl --location --request DELETE 'http://localhost:8080/product/delete/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDExODI1NTEsImlhdCI6MTc0MTA5NjE1MSwiaXNBZG1pbiI6dHJ1ZSwidXNlcl9pZCI6MX0.FhEZxSrjz4BK7sIoeP5ltkZt9kLLl8oPrVT-7n4SzVA' \
+
+// getall
+###
+curl --location --request GET 'http://localhost:8080/product/get-all' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDEyMjIzMTgsImlhdCI6MTc0MTEzNTkxOCwiaXNBZG1pbiI6ZmFsc2UsInVzZXJfaWQiOjR9.FxsLKGPCaLNUKkZICi6R4_vp_cZFi3Pnx-ot2hiAD44' \
+
+
+
